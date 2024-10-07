@@ -94,7 +94,6 @@ header {
 h1 {
   font-size: 45px;
   span {
-    display: block;
     font-family: 'Great Vibes', cursive;
     color: var(--main-color);
   }
@@ -346,6 +345,7 @@ h1 {
   width: 100%;
   text-align: center;
   span {
+    display: block;
     /* margin-top: 7px; */
     padding: 5px;
     color: var(--text-color);
