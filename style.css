@@ -72,6 +72,9 @@ header {
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
+  h3.text_small {
+    display: none;
+  }
 }
 .header_avatar {
   width: 250px;
@@ -99,6 +102,7 @@ h1 {
 .column_main h2 {
   margin-bottom: 30px;
 }
+
 .main_section {
   margin-bottom: 50px;
 }
@@ -385,5 +389,108 @@ h1 {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 900px) {
+  .column {
+    padding: 0 20px;
+  }
+  .column_main {
+    padding: 0 20px;
+    background-color: var(--gray);
+    width: 100%;
+    h3 {
+      display: none;
+    }
+    h3.text_small {
+      display: block;
+    }
+  }
+  .header::before {
+    width: 200px;
+    height: 200px;
+  }
+  .header__avatar {
+    width: 200px;
+    height: 200px;
+  }
+  .header__avatar::after {
+    width: 50px;
+    height: 50px;
+    right: 4px;
+  }
+  .header__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .work__info {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .work__date {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 650px) {
+  .column_header {
+    background-color: var(--gray);
+  }
+  .main {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+  .document-section {
+    padding-bottom: 15px;
+  }
+  .document-title {
+    padding-bottom: 15px;
+  }
+  .about {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 510px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__avatar {
+    margin: 20px auto;
+  }
+  .header__title {
+    text-align: center;
+  }
+  .header__subtitle {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  .footer__block:nth-child(2) {
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .footer__social {
+    margin-right: 0;
+  }
+}
+@media (max-width: 380px) {
+  .education__block {
+    margin-bottom: 20px;
+  }
+  .work__block {
+    margin-bottom: 10px;
+  }
+  .hobby__wrapper {
+    flex-direction: column;
+  }
+  .hobby__row {
+    width: 100%;
   }
 }
