@@ -209,6 +209,7 @@ h1 {
 }
 .acor-container label:hover {
   color: var(--light-brown);
+  text-decoration: underline;
 }
 .acor-container input {
   display: none;
@@ -245,12 +246,17 @@ h1 {
   height: 400px;
 }
 .bg-image {
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
+  /* filter: blur(6px);
+  -webkit-filter: blur(6px); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  .wrapper-white {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+  }
 
   &.puzzle {
     background-image: url('images/puzzle.jpg');
@@ -264,6 +270,9 @@ h1 {
   }
   &.hangman {
     background-image: url('images/man.jpg');
+  }
+  &.git {
+    background-image: url('images/git.jpg');
   }
 }
 
@@ -301,9 +310,9 @@ h1 {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: -28px;
   padding: 16px;
-  color: white;
+  color: var(--orange);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -320,7 +329,8 @@ h1 {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(218, 106, 0, 0.8);
+  color: var(--main-color);
+  background-color: var(--gray);
 }
 
 /* Caption text */
@@ -355,11 +365,12 @@ h1 {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  border: 1px solid var(--orange);
 }
 
 .active,
 .dot:hover {
-  background-color: var(--main-color);
+  background-color: var(--orange);
 }
 
 /* Fading animation */
