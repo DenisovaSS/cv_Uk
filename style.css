@@ -288,8 +288,8 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
-  height: 60px;
+  width: 85%;
+  height: 70px;
   padding: 5px;
   text-align: center;
 }
@@ -345,8 +345,10 @@ h1 {
   width: 100%;
   text-align: center;
   div {
-    margin-top: 7px;
+    /* margin-top: 7px; */
+    padding: 5px;
     color: var(--text-color);
+    font-size: 13px;
   }
 }
 
@@ -393,11 +395,14 @@ h1 {
 }
 @media (max-width: 900px) {
   .column {
+    padding: 0 40px;
+  }
+  .column__main {
     padding: 0 20px;
   }
   .column_main {
     padding: 0 20px;
-    background-color: var(--gray);
+    /* background-color: var(--gray); */
     width: 100%;
     h3 {
       display: none;
@@ -407,19 +412,19 @@ h1 {
     }
   }
   .header::before {
+    width: 250px;
+    height: 250px;
+  }
+  .header_avatar {
     width: 200px;
     height: 200px;
   }
-  .header__avatar {
-    width: 200px;
-    height: 200px;
-  }
-  .header__avatar::after {
+  .header_avatar::after {
     width: 50px;
     height: 50px;
     right: 4px;
   }
-  .header__title {
+  h1 {
     font-size: 40px;
   }
 }
@@ -430,6 +435,10 @@ h1 {
   }
   .work__date {
     margin-bottom: 5px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(243, 244, 245, 0.09);
   }
 }
 @media (max-width: 650px) {
@@ -451,46 +460,55 @@ h1 {
   .about {
     padding-top: 20px;
   }
+  .column h2,
+  .column_main h2 {
+    margin-bottom: 10px;
+  }
+  .hobby_text {
+    padding: 0 10px 10px 15px;
+    font-size: 15px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: url(--gray);
+  }
 }
 @media (max-width: 510px) {
   .header {
     flex-direction: column;
   }
-  .header__avatar {
+  .header_avatar {
     margin: 20px auto;
   }
-  .header__title {
+  h1 {
     text-align: center;
   }
-  .header__subtitle {
+  h3.text_small {
     text-align: center;
     padding-bottom: 20px;
   }
-}
-@media (max-width: 420px) {
-  .footer__inner {
-    flex-direction: column;
+  .main_section {
+    margin-bottom: 30px;
   }
-  .footer__block:nth-child(2) {
-    margin-right: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .footer__social {
-    margin-right: 0;
+  .wrapp {
+    height: 250px;
   }
 }
+
 @media (max-width: 380px) {
   .education__block {
     margin-bottom: 20px;
   }
-  .work__block {
+  .contact__block {
     margin-bottom: 10px;
   }
-  .hobby__wrapper {
+  .hobby_wrapper {
     flex-direction: column;
   }
-  .hobby__row {
+  .hobby_row {
     width: 100%;
+  }
+  .wrapp {
+    height: 200px;
   }
 }
